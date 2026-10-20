@@ -161,9 +161,16 @@ describe('Generate button — success message (Issue #2)', () => {
 
 describe('Generate button — multiple selections (Issue #3)', () => {
 
-  test('multiple items from the same tab all appear in the message', () => {
-    // Write your test here
-
+    test('multiple items from the same tab all appear in the message', () => {
+      check('starter-soup');
+      check('starter-salad');
+      check('main-steak');
+      check('dessert-icecream');
+      click('generate-btn');
+      expect(getMessage()).toContain('Soup');
+      aexpect(getMessage()).toContain('Salad');
+  });
+    
   });
 
 });
