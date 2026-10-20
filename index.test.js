@@ -166,7 +166,5 @@ describe('Generate button — multiple selections (Issue #3)', () => {
       expect(getMessage()).toContain('Soup');
       expect(getMessage()).toContain('Salad');
   });
-    
-  });
 
 });
