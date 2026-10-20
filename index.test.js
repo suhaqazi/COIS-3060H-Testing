@@ -135,13 +135,9 @@ describe('Generate button — success message (Issue #2)', () => {
     check('dessert-brownie');
     click('generate-btn');
     const msg = getMessage();
-    // BUG: this checks the exact full string, but the app displays items
-    // in a random order every time. So this test is flaky — it passes
-    // sometimes and fails other times with no code changes.
-    // Fix it so the test passes reliably regardless of item order.
     expect(msg).toContain('Garlic Bread');
     expect(msg).toContain('Pizza');
-    expect(msg).toContain('Brownie');;
+    expect(msg).toContain('Brownie');
   });
 
 });
@@ -168,7 +164,7 @@ describe('Generate button — multiple selections (Issue #3)', () => {
       check('dessert-icecream');
       click('generate-btn');
       expect(getMessage()).toContain('Soup');
-      aexpect(getMessage()).toContain('Salad');
+      expect(getMessage()).toContain('Salad');
   });
     
   });
